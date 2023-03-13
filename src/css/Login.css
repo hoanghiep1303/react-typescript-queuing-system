@@ -1,0 +1,81 @@
+.login-img {
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  max-height: 550px;
+  object-fit: cover;
+  object-position: left;
+}
+
+.btn-warning {
+  color: #fff;
+  --bs-btn-bg: #ff9138;
+  --bs-btn-border-color: #ff9138;
+  --bs-btn-hover-bg: #fca45d;
+  --bs-btn-hover-border-color: #fca45d;
+  --bs-btn-active-bg: #fca45d;
+  --bs-btn-active-border-color: #fca45d;
+  --bs-btn-disabled-bg: #ff9138;
+  --bs-btn-disabled-border-color: #ff9138;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  max-width: 150px;
+  max-height: 150px;
+  object-fit: cover;
+  object-position: left;
+}
+
+.text-orange {
+  color: #ff9138;
+}
+
+.my-background {
+  background-color: #f6f6f6;
+}
+
+.input-field {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: #fdd6f1 0px 5px 15px;
+}
+
+.input-field input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: hidden;
+  outline: none;
+  font-size: 18px;
+  text-indent: 2px;
+  padding: 5px;
+}
+
+.input-field span {
+  cursor: pointer;
+}
+
+.forgot-img {
+  width: 100%;
+  height: 100%;
+  max-width: 650px;
+  object-fit: cover;
+  object-position: left;
+}
+
+.btn-outline-warning {
+  --bs-btn-color: #ff9138;
+  --bs-btn-border-color: #ff9138;
+  --bs-btn-hover-bg: #ff9138;
+  --bs-btn-hover-border-color: #ff9138;
+  --bs-btn-active-bg: #ff9138;
+  --bs-btn-active-border-color: #ff9138;
+  --bs-btn-disabled-color: #ff9138;
+  --bs-btn-disabled-border-color: #ff9138;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-active-color: #fff;
+}
