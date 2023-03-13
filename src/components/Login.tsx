@@ -55,7 +55,7 @@ const Login: React.FC = () => {
         <div className="row vh-100 vw-100">
           <div className="col-lg-5 text-black my-background">
             <div className="d-flex justify-content-center px-5 ms-xl-4 mt-5">
-              <img alt="" className="logo" src={logo} />
+              <img alt="" className="logo-login" src={logo} />
             </div>
 
             {/* <h4 className="px-5 mt-5 text-center">ĐĂNG NHẬP</h4> */}
