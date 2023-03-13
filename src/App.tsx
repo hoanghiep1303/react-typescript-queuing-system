@@ -3,12 +3,9 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home";
 import Login from "./components/Login";
-// import { initializeApp } from "firebase/app";
-// import { config } from "./config/config";
 import AuthRoute from "./components/AuthRoute";
 import Forgot from "./components/Forgot";
-
-// initializeApp(config);
+import NotFound from "./components/NotFound";
 
 export interface IApplicationProps {}
 
@@ -26,6 +23,7 @@ const App: React.FC = (props) => {
         />
         <Route path="/login" element={<Login />} />
         <Route path="/forgot-password" element={<Forgot />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
