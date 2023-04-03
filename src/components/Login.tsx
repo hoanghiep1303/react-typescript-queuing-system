@@ -58,8 +58,6 @@ const Login: React.FC = () => {
               <img alt="" className="logo-login" src={logo} />
             </div>
 
-            {/* <h4 className="px-5 mt-5 text-center">ĐĂNG NHẬP</h4> */}
-
             <form className=" mx-auto px-5 mt-5">
               <div className="mb-3">
                 <label className="form-label">Tên đăng nhập *</label>

@@ -66,13 +66,26 @@ const Forgot: React.FC = (props) => {
   const [type, setType] = useState("password");
   const [icon, setIcon] = useState(eyeOff);
 
-  const handleToggle = () => {
+  const handleToggle_1 = () => {
     if (type === "password") {
       setIcon(eye);
       setType("text");
     } else {
       setIcon(eyeOff);
       setType("password");
+    }
+  };
+
+  const [types, setTypes] = useState("password");
+  const [icons, setIcons] = useState(eyeOff);
+
+  const handleToggle_2 = () => {
+    if (types === "password") {
+      setIcons(eye);
+      setTypes("text");
+    } else {
+      setIcons(eyeOff);
+      setTypes("password");
     }
   };
 
@@ -102,7 +115,7 @@ const Forgot: React.FC = (props) => {
                         onChange={(event) => setPassword(event.target.value)}
                         value={password}
                       />
-                      <span onClick={handleToggle}>
+                      <span onClick={handleToggle_1}>
                         <Icon icon={icon} size={25} />
                       </span>
                     </div>
@@ -115,15 +128,15 @@ const Forgot: React.FC = (props) => {
                     <div className="input-field form-control rounded">
                       <input
                         autoComplete="new-password"
-                        type={type}
+                        type={types}
                         name="confirm"
                         id="confirm"
                         placeholder="Confirm Password"
                         onChange={(event) => setConfirm(event.target.value)}
                         value={confirm}
                       />
-                      <span onClick={handleToggle}>
-                        <Icon icon={icon} size={25} />
+                      <span onClick={handleToggle_2}>
+                        <Icon icon={icons} size={25} />
                       </span>
                     </div>
                   </div>
@@ -164,6 +177,7 @@ const Forgot: React.FC = (props) => {
                     <button
                       type="button"
                       className="btn btn-outline-warning text-center w-100 mx-4"
+                      onClick={() => navigate(-1)}
                     >
                       Hủy
                     </button>
