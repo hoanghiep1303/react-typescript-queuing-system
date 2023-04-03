@@ -1,7 +1,7 @@
 # Login Account:
 
-Username: admin@gmail.com
-Password: 12345678
+Username: admin@gmail.com\
+Password: 12345678\
 
 # Getting Started with Create React App
 
