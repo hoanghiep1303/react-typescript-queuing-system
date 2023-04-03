@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import SideBar from "../SideBar";
 import avatar from "../../../assets/img/avatar.png";
-import bell from "../../../assets/img/bell.png";
+import bell1 from "../../../assets/img/bell.png";
+import bell2 from "../../../assets/img/bell-active.png";
 import Dropdown from "../../utils/Dropdown";
 import { Icon } from "react-icons-kit";
 import { eye } from "react-icons-kit/feather/eye";
@@ -19,6 +20,7 @@ const AddAccount = (props: Props) => {
   const navigate = useNavigate();
   const [selectedOption, setSelectedOption] = useState(roleOptions[0]);
   const [selectedOptions, setSelectedOptions] = useState(statusOptions[0]);
+  const [showNotification, setShowNotification] = useState<boolean>(false);
 
   const [type, setType] = useState("password");
   const [icon, setIcon] = useState(eyeOff);
@@ -72,7 +74,95 @@ const AddAccount = (props: Props) => {
               <div className="col-md-4">
                 <div className="d-flex justify-content-center my-4 px-2">
                   <div className="d-flex align-items-center">
-                    <img className="me-4" src={bell} alt="" />
+                    <div className="position-relative">
+                      <img
+                        className="me-4 cursor-pointer"
+                        src={showNotification === true ? bell2 : bell1}
+                        alt=""
+                        onClick={() => setShowNotification(!showNotification)}
+                      />
+                      {showNotification && (
+                        <>
+                          <div className="dropdown-options-bell rounded border ovf-170 cursor-pointer">
+                            <div className="noti-title fw-bolder">
+                              Thông báo
+                            </div>
+                            <div className="overflow-385">
+                              <div className="dropdown-option-bell">
+                                <div className="d-flex flex-wrap align-items-center">
+                                  <p className="text-brown fw-bolder mb-1">
+                                    Người dùng: Nguyễn Thị Thùy Dung
+                                  </p>
+                                  <p className="text-muted fw-bolder mb-0">
+                                    Thời gian nhận số: 12h20 ngày 30/11/2021
+                                  </p>
+                                </div>
+                              </div>
+                              <div className="dropdown-option-bell">
+                                <div className="d-flex flex-wrap align-items-center">
+                                  <p className="text-brown fw-bolder mb-1">
+                                    Người dùng: Nguyễn Thị Thùy Dung
+                                  </p>
+                                  <p className="text-muted fw-bolder mb-0">
+                                    Thời gian nhận số: 12h20 ngày 30/11/2021
+                                  </p>
+                                </div>
+                              </div>
+                              <div className="dropdown-option-bell">
+                                <div className="d-flex flex-wrap align-items-center">
+                                  <p className="text-brown fw-bolder mb-1">
+                                    Người dùng: Nguyễn Thị Thùy Dung
+                                  </p>
+                                  <p className="text-muted fw-bolder mb-0">
+                                    Thời gian nhận số: 12h20 ngày 30/11/2021
+                                  </p>
+                                </div>
+                              </div>
+                              <div className="dropdown-option-bell">
+                                <div className="d-flex flex-wrap align-items-center">
+                                  <p className="text-brown fw-bolder mb-1">
+                                    Người dùng: Nguyễn Thị Thùy Dung
+                                  </p>
+                                  <p className="text-muted fw-bolder mb-0">
+                                    Thời gian nhận số: 12h20 ngày 30/11/2021
+                                  </p>
+                                </div>
+                              </div>
+                              <div className="dropdown-option-bell">
+                                <div className="d-flex flex-wrap align-items-center">
+                                  <p className="text-brown fw-bolder mb-1">
+                                    Người dùng: Nguyễn Thị Thùy Dung
+                                  </p>
+                                  <p className="text-muted fw-bolder mb-0">
+                                    Thời gian nhận số: 12h20 ngày 30/11/2021
+                                  </p>
+                                </div>
+                              </div>
+                              <div className="dropdown-option-bell">
+                                <div className="d-flex flex-wrap align-items-center">
+                                  <p className="text-brown fw-bolder mb-1">
+                                    Người dùng: Nguyễn Thị Thùy Dung
+                                  </p>
+                                  <p className="text-muted fw-bolder mb-0">
+                                    Thời gian nhận số: 12h20 ngày 30/11/2021
+                                  </p>
+                                </div>
+                              </div>
+                              <div className="dropdown-option-bell">
+                                <div className="d-flex flex-wrap align-items-center">
+                                  <p className="text-brown fw-bolder mb-1">
+                                    Người dùng: Nguyễn Thị Thùy Dung
+                                  </p>
+                                  <p className="text-muted fw-bolder mb-0">
+                                    Thời gian nhận số: 12h20 ngày 30/11/2021
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </>
+                      )}
+                    </div>
                     <div
                       onClick={() => navigate("/")}
                       className="d-flex align-items-center text-decoration-none cursor-pointer"

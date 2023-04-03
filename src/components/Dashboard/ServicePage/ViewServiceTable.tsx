@@ -1,6 +1,9 @@
 import React, { useRef, useState } from "react";
 import data from "../../../data/view_service_data.json";
 import "../../../css/Table.css";
+import On from "../../../assets/img/on.png";
+import Blue from "../../../assets/img/Blue.png";
+import Gray from "../../../assets/img/Gray.png";
 
 type Data = typeof data;
 
@@ -59,7 +62,24 @@ const ViewServiceTable = ({ data }: { data: Data }) => {
                 return (
                   <tr key={service.id}>
                     <td className="py-17 ps-17">{service.number}</td>
-                    <td className="py-17 ps-17">{service.status}</td>
+                    <td className="py-17 ps-17">
+                      {service.status === "Đã hoàn thành" ? (
+                        <div className="d-flex align-items-center">
+                          <img className="me-2" alt="" src={On} />
+                          Đã hoàn thành
+                        </div>
+                      ) : service.status === "Đang thực hiện" ? (
+                        <div className="d-flex align-items-center">
+                          <img className="me-2" alt="" src={Blue} />
+                          Đang thực hiện
+                        </div>
+                      ) : (
+                        <div className="d-flex align-items-center">
+                          <img className="me-2" alt="" src={Gray} />
+                          Vắng
+                        </div>
+                      )}
+                    </td>
                   </tr>
                 );
               })}

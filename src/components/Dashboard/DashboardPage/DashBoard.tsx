@@ -173,7 +173,7 @@ const DashBoard = (props: IProps) => {
                             <div className="noti-title fw-bolder">
                               Thông báo
                             </div>
-                            <div className="overflow-460">
+                            <div className="overflow-385">
                               <div className="dropdown-option-bell">
                                 <div className="d-flex flex-wrap align-items-center">
                                   <p className="text-brown fw-bolder mb-1">
@@ -379,12 +379,34 @@ const DashBoard = (props: IProps) => {
                               <div className="p-3 py-4">
                                 <div className="d-flex justify-content-between">
                                   <div className="col-6 d-flex flex-wrap align-items-center">
-                                    <h5 className="w-100">
-                                      Bảng thống kê theo ngày
-                                    </h5>
-                                    <p className="text-muted w-100 mb-0">
-                                      tháng 11/2021
-                                    </p>
+                                    {options === "Ngày" ? (
+                                      <>
+                                        <h5 className="w-100">
+                                          Bảng thống kê theo ngày
+                                        </h5>
+                                        <p className="text-muted w-100 mb-0">
+                                          tháng 11/2021
+                                        </p>
+                                      </>
+                                    ) : options === "Tuần" ? (
+                                      <>
+                                        <h5 className="w-100">
+                                          Bảng thống kê theo tuần
+                                        </h5>
+                                        <p className="text-muted w-100 mb-0">
+                                          tháng 11/2021
+                                        </p>
+                                      </>
+                                    ) : (
+                                      <>
+                                        <h5 className="w-100">
+                                          Bảng thống kê theo tháng
+                                        </h5>
+                                        <p className="text-muted w-100 mb-0">
+                                          Năm 2021
+                                        </p>
+                                      </>
+                                    )}
                                   </div>
                                   <div className="col-6 d-flex align-items-center justify-content-end">
                                     <div className="d-flex align-items-center gap-2">

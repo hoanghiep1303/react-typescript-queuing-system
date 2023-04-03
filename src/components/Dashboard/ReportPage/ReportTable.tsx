@@ -2,6 +2,9 @@ import React, { useRef, useState } from "react";
 import data from "../../../data/report_data.json";
 import "../../../css/Table.css";
 import UpDown from "../../../assets/img/up-down-arrow.png";
+import Off from "../../../assets/img/off.png";
+import Blue from "../../../assets/img/Blue.png";
+import Gray from "../../../assets/img/Gray.png";
 
 type Data = typeof data;
 
@@ -67,7 +70,24 @@ const ReportTable = ({ data }: { data: Data }) => {
                     <td className="py-17 ps-17">{report.number}</td>
                     <td className="py-17 ps-17">{report.service_name}</td>
                     <td className="py-17 ps-17">{report.time}</td>
-                    <td className="py-17 ps-17">{report.status}</td>
+                    <td className="py-17 ps-17">
+                      {report.status === "Đang chờ" ? (
+                        <div className="d-flex align-items-center">
+                          <img className="me-2" alt="" src={Blue} />
+                          Đang chờ
+                        </div>
+                      ) : report.status === "Bỏ qua" ? (
+                        <div className="d-flex align-items-center">
+                          <img className="me-2" alt="" src={Off} />
+                          Bỏ qua
+                        </div>
+                      ) : (
+                        <div className="d-flex align-items-center">
+                          <img className="me-2" alt="" src={Gray} />
+                          Đã sử dụng
+                        </div>
+                      )}
+                    </td>
                     <td className="py-17 ps-17">{report.supply}</td>
                   </tr>
                 );
